@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-celiii-причин-увольн-e",
+  "editForm": "i-i-s-celiii-причин-увольн-e",
+  "external": false,
+  "caption": "Причин увольн",
+  "name": "IISCeliiiПричинУвольнL",
+  "className": "ПричинУвольнL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-celiii-причин-увольн",
+      "modelProjection": "ПричинУвольнL"
+    }
+  ]
+}

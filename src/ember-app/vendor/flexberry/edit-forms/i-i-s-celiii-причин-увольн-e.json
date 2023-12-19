@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Специалист",
+      "projection": "СпециалистL",
+      "detailModelName": null
+    },
+    {
+      "master": "анкеты",
+      "displayAttributeName": "номер",
+      "required": false,
+      "relationName": "Список.Анкеты",
+      "projection": "АнкетыL",
+      "detailModelName": "i-i-s-celiii-список-анкет"
+    }
+  ],
+  "external": false,
+  "caption": "Причин увольн",
+  "name": "IISCeliiiПричинУвольнE",
+  "className": "ПричинУвольнE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-celiii-причин-увольн",
+      "modelProjection": "ПричинУвольнE"
+    }
+  ]
+}

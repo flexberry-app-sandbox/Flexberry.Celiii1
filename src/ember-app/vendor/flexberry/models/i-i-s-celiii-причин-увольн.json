@@ -1,0 +1,103 @@
+﻿{
+  "name": "IISCeliiiПричинУвольн",
+  "modelName": "i-i-s-celiii-причин-увольн",
+  "className": "ПричинУвольн",
+  "nameSpace": "IIS.Celiii",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаЗаполн",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "специалист",
+      "relatedTo": "i-i-s-celiii-специалист",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "список",
+      "relatedTo": "i-i-s-celiii-список-анкет",
+      "inverse": "причинУвольн"
+    },
+    {
+      "name": "рекомендации",
+      "relatedTo": "i-i-s-celiii-рекомендац",
+      "inverse": "причинУвольн"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ПричинУвольнE",
+      "modelName": "i-i-s-celiii-причин-увольн",
+      "attrs": [
+        {
+          "name": "датаЗаполн",
+          "caption": "Дата заполнения",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИО",
+          "lookupValueField": "фИО",
+          "relationName": "Специалист",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [],
+          "index": 1,
+          "type": "standard",
+          "caption": "ФИО",
+          "name": "специалист",
+          "relatedTo": "i-i-s-celiii-специалист",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "РекомендацE",
+          "caption": "Рекомендации",
+          "name": "рекомендации",
+          "relatedTo": "i-i-s-celiii-рекомендац",
+          "inverse": null
+        },
+        {
+          "projectionName": "СписокАнкетE",
+          "caption": "Список анкет",
+          "name": "список",
+          "relatedTo": "i-i-s-celiii-список-анкет",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ПричинУвольнL",
+      "modelName": "i-i-s-celiii-причин-увольн",
+      "attrs": [
+        {
+          "name": "датаЗаполн",
+          "caption": "Дата заполн",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,72 @@
+﻿{
+  "name": "IISCeliiiСписокАнкет",
+  "modelName": "i-i-s-celiii-список-анкет",
+  "className": "СписокАнкет",
+  "nameSpace": "IIS.Celiii",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "анкеты",
+      "relatedTo": "i-i-s-celiii-анкеты",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "причинУвольн",
+      "relatedTo": "i-i-s-celiii-причин-увольн",
+      "inverse": "список"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СписокАнкетE",
+      "modelName": "i-i-s-celiii-список-анкет",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Номер",
+          "lookupValueField": "номер",
+          "relationName": "Анкеты",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "главнПричин",
+              "caption": "Причина",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "относКатСотр",
+              "caption": "Категория сотрудника",
+              "hidden": false,
+              "index": 2
+            },
+            {
+              "name": "коммент",
+              "caption": "Комментарий",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Номер",
+          "name": "анкеты",
+          "relatedTo": "i-i-s-celiii-анкеты",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistencehttp://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Olingo4PG">
+        <class>Celiii.model.PrichinUvoln</class>
+        <class>Celiii.model.Rekomendac</class>
+        <class>Celiii.model.Ankety</class>
+        <class>Celiii.model.SpisokAnket</class>
+        <class>Celiii.model.Specialist</class>
+        <class>Celiii.model.FlexberryAdvLimit</class>
+        <class>Celiii.model.NewPlatformFlexberryFlexberryUserSetting</class>
+        <class>Celiii.model.NewPlatformFlexberryServicesLock</class>
+        <class>Celiii.model.IISCaseberryLoggingObjectsApplicationLog</class>
+
+    </persistence-unit>
+</persistence>

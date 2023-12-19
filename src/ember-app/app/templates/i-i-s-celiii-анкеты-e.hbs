@@ -1,0 +1,108 @@
+<h3 class="ui header">{{t "forms.i-i-s-celiii-анкеты-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номер
+      class=(if (v-get validationModel "номер" "isInvalid") "error")
+      label=(t "forms.i-i-s-celiii-анкеты-e.номер-caption")
+      data-test-i-i-s-celiii-анкеты-e-номер=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номер" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-celiii-анкеты-e.датаЗаполн-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаЗаполн
+      class=(if (v-get validationModel "датаЗаполн" "isInvalid") "error")
+      data-test-i-i-s-celiii-анкеты-e-датаЗаполн=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаЗаполн" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-celiii-анкеты-e-главнПричин="true">
+    <label>{{t "forms.i-i-s-celiii-анкеты-e.главнПричин-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-celiii-факторы")
+      value=model.главнПричин
+      class=(if (v-get validationModel "главнПричин" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "главнПричин" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-celiii-анкеты-e-оценРабот="true">
+    <label>{{t "forms.i-i-s-celiii-анкеты-e.оценРабот-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-celiii-оценка")
+      value=model.оценРабот
+      class=(if (v-get validationModel "оценРабот" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оценРабот" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-celiii-анкеты-e-относКатСотр="true">
+    <label>{{t "forms.i-i-s-celiii-анкеты-e.относКатСотр-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-celiii-катег-сотруд")
+      value=model.относКатСотр
+      class=(if (v-get validationModel "относКатСотр" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "относКатСотр" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-celiii-анкеты-e-какойСтаж="true">
+    <label>{{t "forms.i-i-s-celiii-анкеты-e.какойСтаж-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-celiii-стаж")
+      value=model.какойСтаж
+      class=(if (v-get validationModel "какойСтаж" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "какойСтаж" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-celiii-анкеты-e-возрастСотруд="true">
+    <label>{{t "forms.i-i-s-celiii-анкеты-e.возрастСотруд-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-celiii-возраст")
+      value=model.возрастСотруд
+      class=(if (v-get validationModel "возрастСотруд" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "возрастСотруд" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.коммент
+      class=(if (v-get validationModel "коммент" "isInvalid") "error")
+      label=(t "forms.i-i-s-celiii-анкеты-e.коммент-caption")
+      data-test-i-i-s-celiii-анкеты-e-коммент=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "коммент" "message")}}
+  </div>
+</form>

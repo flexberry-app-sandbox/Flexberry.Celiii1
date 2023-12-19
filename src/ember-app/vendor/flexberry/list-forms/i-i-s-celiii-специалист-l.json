@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-celiii-специалист-e",
+  "editForm": "i-i-s-celiii-специалист-e",
+  "external": false,
+  "caption": "Специалист",
+  "name": "IISCeliiiСпециалистL",
+  "className": "СпециалистL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-celiii-специалист",
+      "modelProjection": "СпециалистL"
+    }
+  ]
+}

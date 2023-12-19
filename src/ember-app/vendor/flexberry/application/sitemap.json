@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Celiii",
+  "applicationTitle": "Celiii",
+  "items": [
+    {
+      "link": null,
+      "menuName": "celiii",
+      "caption": "Celiii",
+      "title": "Celiii",
+      "children": [
+        {
+          "link": "i-i-s-celiii-причин-увольн-l",
+          "menuName": null,
+          "caption": "Причин увольн",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-celiii-анкеты-l",
+          "menuName": null,
+          "caption": "Анкеты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-celiii-специалист-l",
+          "menuName": null,
+          "caption": "Специалист",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

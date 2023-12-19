@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Анкеты",
+  "name": "IISCeliiiАнкетыE",
+  "className": "АнкетыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-celiii-анкеты",
+      "modelProjection": "АнкетыE"
+    }
+  ]
+}

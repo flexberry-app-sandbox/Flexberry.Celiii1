@@ -1,0 +1,1 @@
+docker-compose -p celiii up -d
